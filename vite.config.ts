@@ -11,21 +11,11 @@ export default defineConfig(({ mode }) => {
     server: {
       port: 3000,
       host: true,
-      proxy: {
-        '/api': {
-          target: 'http://localhost:5000',
-          changeOrigin: true,
-          secure: false,
-        },
-      },
     },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
       },
-    },
-    optimizeDeps: {
-      exclude: ['lucide-react'],
     },
     build: {
       outDir: 'dist',
