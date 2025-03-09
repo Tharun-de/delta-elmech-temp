@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   return {
     plugins: [react()],
-    base: '/',
+    base: '/delta-elmech-temp/',
     server: {
       port: 3000,
       host: true,
